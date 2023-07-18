@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Comment" ADD COLUMN     "hotness" DOUBLE PRECISION NOT NULL DEFAULT 0;

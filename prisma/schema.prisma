@@ -16,6 +16,9 @@ model Comment {
   content         String
   createdAt       DateTime  @default(now()) @db.Timestamp(6)
   updatedAt       DateTime  @default(now()) @db.Timestamp(6)
+  hotness         Float     @default(0)
+  downvotes       Int       @default(0)
+  upvotes         Int       @default(0)
   comments        Comment?  @relation("commentsTocomments", fields: [parentCommentId], references: [id], onDelete: NoAction, onUpdate: NoAction)
   otherComments   Comment[] @relation("commentsTocomments")
   posts           Post      @relation(fields: [postId], references: [id], onDelete: NoAction, onUpdate: NoAction)
@@ -32,6 +35,10 @@ model Post {
   subbenditId String
   createdAt   DateTime  @default(now()) @db.Timestamp(6)
   updatedAt   DateTime  @default(now()) @db.Timestamp(6)
+  hotness     Float     @default(0)
+  downvotes   Int       @default(0)
+  upvotes     Int       @default(0)
+  ogImage     String?
   comments    Comment[]
   subbendits  Subbendit @relation(fields: [subbenditId], references: [id], onDelete: NoAction, onUpdate: NoAction)
   users       User      @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
@@ -46,6 +53,8 @@ model Subbendit {
   updatedAt      DateTime        @default(now()) @db.Timestamp(6)
   posts          Post[]
   userSubbendits UserSubbendit[]
+  User           User?           @relation(fields: [userId], references: [id])
+  userId         String?
 }
 
 model UserSubbendit {
@@ -59,16 +68,17 @@ model UserSubbendit {
 
 model User {
   id             String          @id @default(cuid())
-  name           String          @unique(map: "User_username_key") @db.VarChar(255)
   email          String          @unique @db.VarChar(255)
   emailVerified  DateTime?
   createdAt      DateTime        @default(now()) @db.Timestamp(6)
   updatedAt      DateTime        @default(now()) @db.Timestamp(6)
+  name           String          @unique(map: "User_username_key") @db.VarChar(255)
   image          String?
   accounts       Account[]
   comments       Comment[]
   posts          Post[]
   sessions       Session[]
+  Subbendit      Subbendit[]
   userSubbendits UserSubbendit[]
   votes          Vote[]
 }

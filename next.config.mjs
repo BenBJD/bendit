@@ -16,7 +16,10 @@ const config = {
    */
   i18n: {
     locales: ["en"],
-    defaultLocale: "en",
+    defaultLocale: "en"
   },
+  images: {
+    domains: ["kaydee.net", "static.vecteezy.com", "cdn.discordapp.com", "b.thumbs.redditmedia.com", "styles.redditmedia.com"]
+  }
 };
 export default config;

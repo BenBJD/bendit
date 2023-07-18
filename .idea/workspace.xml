@@ -5,63 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6af86491-7b91-456d-a21d-072513ccd1c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/bendit.JLj9rA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/bendit.JLj9rA/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/bendit.JLj9rA/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/bendit.JLj9rA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/bendit.JLj9rA/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/bendit.JLj9rA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/postgres.edMnLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_eslintrc.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postcss.config.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prettier.config.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prisma/seed.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/env.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/api/auth/[...nextauth].ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/api/trpc/[trpc].ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/api/root.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/api/routers/post.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/api/routers/user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/api/trpc.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/auth.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/db.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/sorts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/buttons.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/comments.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/misc.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/posts.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/subbendit.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/b/[subbenditName]/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/b/[subbenditName]/posts/[postId]/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/post.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/u/[username].tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/api/routers/comment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/api/routers/subbendit.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/api/routers/vote.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/bendit.JLj9rA/schema/information_schema.FNRwLQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/bendit.JLj9rA/schema/information_schema.FNRwLQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/bendit.JLj9rA/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/bendit.JLj9rA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/bendit.JLj9rA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seed.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/env.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/env.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/api/root.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/api/root.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/api/routers/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/api/routers/post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/api/routers/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/api/routers/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/sorts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/utils/hotSort.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +52,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -92,33 +75,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "18.16.0",
-    "javascript.nodejs.core.library.typings.version": "18.16.0",
-    "last_opened_file_path": "/Users/bendavison/sync/repos/bendit/prisma",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "pnpm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/bendavison/sync/repos/bendit/node_modules/prettier",
-    "settings.editor.selected.configurable": "editing.templates",
-    "ts.external.directory.path": "/Users/bendavison/sync/repos/bendit/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.16.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.16.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bendavison/sync/repos/bendit/prisma&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/bendavison/sync/repos/bendit/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Color Scheme Font&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/bendavison/sync/repos/bendit/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -130,6 +113,17 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/prisma" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/pages/b/[subbenditName]/posts" />
+      <recent name="$PROJECT_DIR$/src/server/sorts" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/components/buttons.tsx" />
+      <recent name="$PROJECT_DIR$/src/components/postActionButton.tsx" />
     </key>
   </component>
   <component name="RunManager">
@@ -162,7 +156,13 @@
       <workItem from="1685378915404" duration="2365000" />
       <workItem from="1685390362297" duration="3808000" />
       <workItem from="1685466791182" duration="8878000" />
-      <workItem from="1685480099881" duration="9438000" />
+      <workItem from="1685480099881" duration="9495000" />
+      <workItem from="1685883860676" duration="38509000" />
+      <workItem from="1686676085581" duration="10512000" />
+      <workItem from="1686758454600" duration="32371000" />
+      <workItem from="1686846303453" duration="5672000" />
+      <workItem from="1687880160772" duration="48950000" />
+      <workItem from="1689629255311" duration="8651000" />
     </task>
     <servers />
   </component>

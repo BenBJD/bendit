@@ -1,25 +1,37 @@
 import { type NextPage } from "next"
 import Head from "next/head"
-import Link from "next/link"
 import { api } from "~/utils/api"
 import { PostRow } from "~/components/posts"
 import { CreatePost } from "~/components/misc"
+import { useRouter } from "next/router"
+import { SubbenditHeader } from "~/components/subbendit"
 
-const Home: NextPage = () => {
+const SubbenditHome: NextPage = () => {
+  const router = useRouter()
+  const subbenditData = api.subbenditRouter.getSubbenditFromName.useQuery({
+    name: router.query.subbenditName as string,
+  })
+
   // get all posts
   const posts = api.postRouter.getPosts.useQuery({
     sort: "hot",
+    subbenditId: subbenditData.data?.id,
     page: 1,
   })
+
+  if (!subbenditData.data) {
+    return <div>Subbendit not found</div>
+  }
 
   return (
     <>
       <Head>
-        <title>Bendit - The back-alley of the internet</title>
+        <title>{subbenditData.data.name} - Bendit</title>
         <meta name="description" content="The back-alley of the internet" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={"mt-14 flex flex-col space-y-3 p-4"}>
+        <SubbenditHeader id={subbenditData.data.id} />
         <CreatePost />
         <div className="flex h-max w-screen space-x-4">
           <div
@@ -44,4 +56,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default SubbenditHome
