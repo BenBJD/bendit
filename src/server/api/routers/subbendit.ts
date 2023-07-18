@@ -21,12 +21,19 @@ export const subbenditRouter = createTRPCRouter({
       })
     }),
   createSubreddit: protectedProcedure
-    .input(z.object({ name: z.string(), ownerId: z.string() }))
+    .input(
+      z.object({
+        name: z.string(),
+        userId: z.string(),
+        description: z.string(),
+      })
+    )
     .mutation(({ ctx, input }) => {
       ctx.prisma.subbendit.create({
         data: {
           name: input.name,
-          ownerId: input.ownerId,
+          userId: input.userId,
+          description: input.description,
         },
       })
     }),
