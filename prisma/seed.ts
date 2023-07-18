@@ -1,6 +1,5 @@
 import {
   PrismaClient,
-  type VoteType,
   type Subbendit,
   type User,
   type Post,
@@ -212,7 +211,7 @@ async function main() {
   console.log(comments.length)
 
   // Creating post and comment votes
-  const voteTypes: VoteType[] = ["UPVOTE", "DOWNVOTE"]
+  const voteTypes: string[] = ["UPVOTE", "DOWNVOTE"]
 
   const postVotesAsync = async () => {
     // Make sure the same user doesn't vote on the same post twice
@@ -232,7 +231,7 @@ async function main() {
 
         const randomVoteType = voteTypes[
           Math.floor(Math.random() * postVotePositivity * voteTypes.length)
-        ] as VoteType
+        ] as "UPVOTE" | "DOWNVOTE"
 
         postVotes.push({
           userId: user.id,
@@ -262,7 +261,7 @@ async function main() {
 
         const randomVoteType = voteTypes[
           Math.floor(Math.random() * commentVotePositivity * voteTypes.length)
-        ] as VoteType
+        ] as "UPVOTE" | "DOWNVOTE"
 
         commentVotes.push({
           userId: user.id,
