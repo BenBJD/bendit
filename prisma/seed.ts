@@ -1,6 +1,6 @@
 import {
   PrismaClient,
-  VoteType,
+  type VoteType,
   type Subbendit,
   type User,
   type Post,
@@ -212,7 +212,7 @@ async function main() {
   console.log(comments.length)
 
   // Creating post and comment votes
-  const voteTypes = [VoteType.UPVOTE, VoteType.DOWNVOTE]
+  const voteTypes: VoteType[] = ["UPVOTE", "DOWNVOTE"]
 
   const postVotesAsync = async () => {
     // Make sure the same user doesn't vote on the same post twice
@@ -315,14 +315,14 @@ async function main() {
     const upvotes = await prisma.vote.count({
       where: {
         postId: post.id,
-        type: VoteType.UPVOTE,
+        type: "UPVOTE",
       },
     })
 
     const downvotes = await prisma.vote.count({
       where: {
         postId: post.id,
-        type: VoteType.DOWNVOTE,
+        type: "DOWNVOTE",
       },
     })
 
