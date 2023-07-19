@@ -8,8 +8,10 @@ export const CreatePost = () => {
   const session = useSession()
   const router = useRouter()
   let imageLink
-  if (!!session.data) {
-    imageLink = session.data.user.image
+  let username
+  if (!!session.data?.user) {
+    imageLink = session.data.user.image as string
+    username = session.data.user.name as string
   } else {
     imageLink =
       "https://static.vecteezy.com/system/resources/thumbnails/004/511/281/small/default-avatar-photo-placeholder-profile-picture-vector.jpg"
@@ -20,12 +22,10 @@ export const CreatePost = () => {
         "flex flex-row space-x-6 rounded-lg border border-gray-700 bg-gray-800 p-2"
       }
     >
-      <Link href={"/u/" + session.data?.user.name} className={"relative w-11"}>
+      <Link href={"/u/" + username} className={"relative w-11"}>
         <Image
-          src={imageLink}
+          src={imageLink as string}
           alt={"Profile Picture"}
-          // width={32}
-          // height={32}
           className={"ml-4 rounded-full border border-fuchsia-400"}
           fill={true}
         />
