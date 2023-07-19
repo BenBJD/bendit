@@ -19,7 +19,10 @@ const config = {
     defaultLocale: "en"
   },
   images: {
-    domains: ["kaydee.net", "static.vecteezy.com", "cdn.discordapp.com", "b.thumbs.redditmedia.com", "styles.redditmedia.com"]
+    remotePatterns: [{
+      protocol: "https",
+      hostname: "**"
+    }]
   },
   output: "standalone"
 };
