@@ -14,7 +14,7 @@ export const CreatePost = () => {
         "flex flex-row space-x-6 rounded-lg border border-gray-700 bg-gray-800 p-2"
       }
     >
-      {session.status === "authenticated" && (
+      {!!session.data?.user && (
         <Link
           href={("/u/" + session.data.user?.name) as string}
           className={"relative w-11"}
