@@ -37,6 +37,8 @@ declare module "next-auth" {
  *
  * @see https://next-auth.js.org/configuration/options
  */
+console.log(env.SPOTIFY_CLIENT_SECRET)
+console.log(env.SPOTIFY_CLIENT_ID)
 export const authOptions: NextAuthOptions = {
   callbacks: {
     session: ({ session, user }) => ({
