@@ -145,6 +145,7 @@ export const postRouter = createTRPCRouter({
       })
     )
     .mutation<Promise<Post>>(async ({ ctx, input }): Promise<Post> => {
+      // Validation
       if (input.url === undefined && input.content === undefined) {
         throw new Error("Must have url and/or content")
       }
@@ -154,6 +155,8 @@ export const postRouter = createTRPCRouter({
       ) {
         throw new Error("Must have subbendit id and/or name")
       }
+
+      // If subbendit name is provided, get the id
       let subbenditId: string
       if (input.subbenditId === undefined) {
         const subbendit = await ctx.prisma.subbendit.findUnique({
@@ -167,30 +170,18 @@ export const postRouter = createTRPCRouter({
         subbenditId = input.subbenditId
       }
 
-      let post: Post
-      if (input.url !== undefined) {
-        const ogImage = (await ogs({ url: input.url })).result.ogImage?.at(0)
-          ?.url as string
-        post = await ctx.prisma.post.create({
-          data: {
-            title: input.title,
-            content: input.content,
-            subbenditId: subbenditId,
-            url: input.url,
-            ogImage: ogImage,
-            userId: ctx.session.user.id,
-          },
-        })
-      } else {
-        post = await ctx.prisma.post.create({
-          data: {
-            title: input.title,
-            content: input.content,
-            subbenditId: subbenditId,
-            userId: ctx.session.user.id,
-          },
-        })
-      }
-      return post
+      // Return post
+      return await ctx.prisma.post.create({
+        data: {
+          title: input.title,
+          content: input.content,
+          subbenditId: subbenditId,
+          url: input.url,
+          ogImage: input.url
+            ? (await ogs({ url: input.url })).result.ogImage?.at(0)?.url
+            : null,
+          userId: ctx.session.user.id,
+        },
+      })
     }),
 })

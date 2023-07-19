@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import { api } from "~/utils/api"
 import { PostRow } from "~/components/posts"
-import { CreatePost } from "~/components/misc"
+import Image from "next/image"
 
 const UserProfile: NextPage = () => {
   const router = useRouter()
@@ -29,25 +29,33 @@ const UserProfile: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="mt-14 flex flex-col space-y-3 p-4">
-        <h1 className="text-2xl font-bold">Welcome to {username}'s Profile</h1>
         {user.data ? (
-          <div className="flex items-center space-x-2">
-            <img
-              src={user.data.image as string}
-              alt={`${username}'s Profile Picture`}
-              className="h-8 w-8 rounded-full"
-            />
-            <p className="text-gray-400">{user.data.name}</p>
+          <div className={"flex h-10 flex-row space-x-2 pl-5"}>
+            <div className="relative flex w-10 space-x-2">
+              <Image
+                src={user.data.image as string}
+                alt={`${username}'s Profile Picture`}
+                className="h-8 w-8 rounded-full"
+                fill={true}
+              />
+            </div>
+            <h1 className="text-2xl font-bold">
+              Welcome to {username}'s Profile
+            </h1>
           </div>
         ) : (
-          <p className="text-gray-400">Loading user profile...</p>
+          <p className="text-gray-400 ">Loading user profile...</p>
         )}
         <div className="flex h-max w-screen space-x-4">
           <div className="w-3/4 rounded-lg border border-gray-700 bg-gray-800">
             <ul>
-              {userPosts.data?.map((post) => (
-                <PostRow postData={post} key={post.id} />
-              ))}
+              {!userPosts.data || userPosts.data.length > 0 ? (
+                userPosts.data?.map((post) => (
+                  <PostRow postData={post} key={post.id} />
+                ))
+              ) : (
+                <p className={"p-2"}>User has no posts yet.</p>
+              )}
             </ul>
           </div>
           <div className="w-1/4 rounded-lg border border-gray-700 bg-gray-800 p-2">
