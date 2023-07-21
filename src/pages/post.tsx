@@ -1,6 +1,6 @@
 import { NextPage } from "next"
 import { useRouter } from "next/router"
-import { useState } from "react"
+import React, { useState } from "react"
 import { api } from "~/utils/api"
 import Head from "next/head"
 import Link from "next/link"

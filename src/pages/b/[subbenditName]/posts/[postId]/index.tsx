@@ -141,7 +141,7 @@ const PostPage: NextPage = () => {
 
   if (postStatus === "loading" || topLevelCommentsStatus === "loading") {
     return <>Loading...</>
-  } else if (!post || !topLevelComments) {
+  } else if (!post || !topLevelComments || !postId) {
     return <>Missing some data...</>
   } else {
     return (
