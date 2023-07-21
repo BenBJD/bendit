@@ -59,7 +59,7 @@ const PostHeader: React.FC<{ postId: string }> = ({ postId }) => {
         {post.url && (
           <Link
             href={post.url}
-            className="relative w-64 overflow-hidden rounded-3xl border border-gray-400"
+            className="relative flex w-64 items-center justify-center overflow-hidden rounded-3xl border border-gray-400"
           >
             {post.ogImage ? (
               <Image
