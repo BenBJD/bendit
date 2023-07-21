@@ -56,7 +56,7 @@ const PostHeader: React.FC<{ postId: string }> = ({ postId }) => {
             <PostButtons postData={post} />
           </div>
         </div>
-        {post.url && (
+        {post.url && post.ogImage && (
           <Link
             href={post.url}
             className="relative w-64 overflow-hidden rounded-3xl border border-gray-400"
