@@ -16,64 +16,62 @@ import { set } from "zod"
 const PostHeader: React.FC<{ postId: string }> = ({ postId }) => {
   const session = useSession()
 
-  const post = api.postRouter.getPost.useQuery({
+  const { data: post, status: postStatus } = api.postRouter.getPost.useQuery({
     id: postId,
   })
 
-  if (!post.data) {
+  if (!post) {
     return <>Loading Post Data...</>
-  }
-
-  return (
-    <div className={"flex flex-row justify-between space-x-2 p-2"}>
-      <div className={"flex"}>
-        <div className={"my-1"}>
-          {session.status === "authenticated" ? (
-            <PostVotes postData={post.data} />
-          ) : (
-            <GuestPostVotes postData={post.data} />
-          )}
-        </div>
-        <div className={"ml-2 flex-col space-y-2"}>
-          <div className={"flex flex-row space-x-2"}>
-            <p>r/{post.data.subbenditName}</p>
-            <Link
-              href={"/u/" + post.data.userName}
-              className={"my-auto flex text-xs text-gray-500"}
-            >
-              Posted by u/{post.data.userName}
-            </Link>
-            <p className={"my-auto flex text-xs text-gray-500"}>
-              <TimeAgo date={post.data.createdAt} />
-            </p>
+  } else {
+    return (
+      <div className={"flex flex-row justify-between space-x-2 p-2"}>
+        <div className={"flex"}>
+          <div className={"my-1"}>
+            {session.status === "authenticated" ? (
+              <PostVotes postData={post} />
+            ) : (
+              <GuestPostVotes postData={post} />
+            )}
           </div>
-          <p className={"text-xl"}>{post.data.title}</p>
-          {post.data.url && (
-            <Link className={"text-xs text-blue-600"} href={post.data.url}>
-              {post.data.url}
-            </Link>
-          )}
-          <p>{post.data.content}</p>
-          <PostButtons postData={post.data} />
+          <div className={"ml-2 flex-col space-y-2"}>
+            <div className={"flex flex-row space-x-2"}>
+              <p>r/{post.subbenditName}</p>
+              <Link
+                href={"/u/" + post.userName}
+                className={"my-auto flex text-xs text-gray-500"}
+              >
+                Posted by u/{post.userName}
+              </Link>
+              <p className={"my-auto flex text-xs text-gray-500"}>
+                <TimeAgo date={post.createdAt} />
+              </p>
+            </div>
+            <p className={"text-xl"}>{post.title}</p>
+            {post.url && (
+              <Link className={"text-xs text-blue-600"} href={post.url}>
+                {post.url}
+              </Link>
+            )}
+            <p>{post.content}</p>
+            <PostButtons postData={post} />
+          </div>
         </div>
+        {post.url && (
+          <Link
+            href={post.url}
+            className="relative w-64 overflow-hidden rounded-3xl border border-gray-400"
+          >
+            <Image
+              src={post.ogImage as string}
+              alt="Preview image"
+              layout="fill"
+              objectFit={"cover"}
+            />
+          </Link>
+        )}
       </div>
-      {post.data.url && (
-        <Link
-          href={post.data.url}
-          className="relative w-64 overflow-hidden rounded-3xl border border-gray-400"
-        >
-          <Image
-            src={post.data.ogImage as string}
-            alt="Preview image"
-            // width={640}
-            // height={360}
-            layout="fill"
-            objectFit={"cover"}
-          />
-        </Link>
-      )}
-    </div>
-  )
+    )
+  }
 }
 
 const CreateComment: React.FC<{ postId: string }> = ({ postId }) => {
@@ -120,11 +118,11 @@ const CreateComment: React.FC<{ postId: string }> = ({ postId }) => {
 const PostPage: NextPage = () => {
   const router = useRouter()
 
-  const postId = router.query.postId as string
+  const postId = router.query.postId
 
   const { data: post, status: postStatus } = api.postRouter.getPost.useQuery(
     {
-      id: postId,
+      id: (!!postId ? postId : "") as string,
     },
     { enabled: !!postId }
   )
@@ -133,7 +131,7 @@ const PostPage: NextPage = () => {
   const { data: topLevelComments, status: topLevelCommentsStatus } =
     api.commentRouter.getTopLevelComments.useQuery(
       {
-        postId: postId,
+        postId: (!!postId ? postId : "") as string,
         page: 1,
       },
       { enabled: !!postId }
@@ -159,8 +157,8 @@ const PostPage: NextPage = () => {
                 "h-max w-3/4 rounded-lg border border-gray-700 bg-gray-800"
               }
             >
-              <PostHeader postId={postId} />
-              <CreateComment postId={postId} />
+              <PostHeader postId={(!!postId ? postId : "") as string} />
+              <CreateComment postId={(!!postId ? postId : "") as string} />
               <div>
                 {topLevelComments.map((comment) => (
                   <Comment key={comment.id} commentId={comment.id} />

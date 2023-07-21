@@ -3,6 +3,7 @@ import { useRouter } from "next/router"
 import Image from "next/image"
 import { api } from "~/utils/api"
 import Link from "next/link"
+import React from "react"
 
 interface SubbenditHeaderProps {
   id: string
@@ -29,13 +30,14 @@ export const SubbenditHeader: React.FC<SubbenditHeaderProps> = ({
   return (
     <div className="relative">
       <Link href={"/b/" + subbenditData.name}>
-        <Image
-          src="https://styles.redditmedia.com/t5_2qh0s/styles/bannerBackgroundImage_7eod37wtj6881.png"
-          alt={subbenditData.name}
-          width={1920}
-          height={384}
-          className="object-cover"
-        />
+        <div className="relative h-40 w-full">
+          <Image
+            src="https://styles.redditmedia.com/t5_2qh0s/styles/bannerBackgroundImage_7eod37wtj6881.png"
+            alt={subbenditData.name}
+            fill={true}
+            className="object-cover"
+          />
+        </div>
       </Link>
       <Link
         href={"/b/" + subbenditData.name}
