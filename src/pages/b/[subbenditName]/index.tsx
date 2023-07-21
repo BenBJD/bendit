@@ -35,7 +35,9 @@ const SubbenditHome: NextPage = () => {
         <CreatePost />
         <div className="flex h-max w-screen space-x-4">
           <div
-            className={"w-3/4 rounded-lg border border-gray-700 bg-gray-800"}
+            className={
+              "h-max w-3/4 rounded-lg border border-gray-700 bg-gray-800"
+            }
           >
             <ul>
               {posts.data?.map((post) => (

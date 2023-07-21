@@ -109,16 +109,17 @@ export const PostRow: React.FC<PostRowProps> = ({ postData }: PostRowProps) => {
   const session = useSession()
   const router = useRouter()
 
-  const handlePostClick = () => {
-    router
-      .push("/b/" + postData.subbenditName + "/posts/" + postData.id)
-      .then(() => window.scrollTo(0, 0))
+  const handlePostClick = async () => {
+    await router.push("/b/" + postData.subbenditName + "/posts/" + postData.id)
+    window.scrollTo(0, 0)
   }
 
   return (
     <li>
       <div
-        className={"flex flex-row space-x-2 border-b border-gray-700 p-1"}
+        className={
+          "flex flex-row space-x-2 border border-gray-700 p-1 transition-colors ease-in-out hover:border-fuchsia-700"
+        }
         onClick={handlePostClick}
         role="button"
       >
@@ -127,9 +128,12 @@ export const PostRow: React.FC<PostRowProps> = ({ postData }: PostRowProps) => {
         ) : (
           <GuestPostVotes postData={postData} />
         )}
-        {postData.ogImage && (
+        {postData.ogImage && postData.url && (
           <div className={"relative w-1/12"}>
-            <div className="aspect-w-16 aspect-h-9 rounded-md">
+            <Link
+              href={postData.url}
+              className="aspect-w-16 aspect-h-9 rounded-md"
+            >
               {postData.ogImage && (
                 <Image
                   src={postData.ogImage}
@@ -138,7 +142,7 @@ export const PostRow: React.FC<PostRowProps> = ({ postData }: PostRowProps) => {
                   style={{ objectFit: "cover" }}
                 />
               )}
-            </div>
+            </Link>
           </div>
         )}
         <div className={"flex flex-auto flex-col"}>
