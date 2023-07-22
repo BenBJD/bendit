@@ -19,7 +19,7 @@ const PostActionButton: React.FC<PostButtonProps> = ({
         }
       }}
       className={
-        "rounded-sm p-1 text-xs text-gray-400 hover:bg-gray-700 focus:bg-gray-700"
+        "rounded-sm p-1 text-xs text-gray-400 hover:bg-neutral-800 focus:bg-neutral-800"
       }
     >
       {children}
@@ -112,7 +112,7 @@ export const UpvoteButton: React.FC<VoteButtonProps> = ({
       }}
       className={
         (voted == "UPVOTE" ? "text-orange-400" : "") +
-        "rounded-sm hover:bg-gray-700"
+        "rounded-sm hover:bg-neutral-800"
       }
     >
       <svg
@@ -167,7 +167,7 @@ export const DownvoteButton: React.FC<VoteButtonProps> = ({
       className={
         voted == "DOWNVOTE"
           ? "text-blue-400"
-          : "" + "rounded-sm hover:bg-gray-700"
+          : "" + "rounded-sm hover:bg-neutral-800"
       }
     >
       <svg

@@ -56,11 +56,11 @@ export const SubbenditHeader: React.FC<SubbenditHeaderProps> = ({
         </div>
         <p className="my-auto text-2xl">r/{subbenditData.name}</p>
       </Link>
-      <div className="mb-1 flex flex-row justify-center space-x-2 border-b border-gray-700 bg-gray-800 p-1">
+      <div className="mb-1 flex flex-row justify-center space-x-2 border-b border-neutral-800 bg-neutral-900 p-1">
         {links.map((link, index) => (
           <button
             key={index}
-            className="border-b-2 border-gray-400 bg-gray-800 p-1"
+            className="border-b-2 border-neutral-400 bg-neutral-900 p-1"
             onClick={() => router.push(link.link)}
           >
             {link.name}

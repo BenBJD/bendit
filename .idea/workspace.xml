@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6af86491-7b91-456d-a21d-072513ccd1c0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/bendit_production.tM8VsA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/869c85e5-f5ef-484d-81b8-4ec316653818/storage_v2/_src_/database/bendit_production.tM8VsA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/buttons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buttons.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/comments.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/comments.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/misc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/misc.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/subbendit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/subbendit.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/b/[subbenditName]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/b/[subbenditName]/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/b/[subbenditName]/posts/[postId]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/b/[subbenditName]/posts/[postId]/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/post.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/api/routers/subbendit.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/api/routers/subbendit.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/u/[username].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/u/[username].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,38 +53,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;import_schema_mapping&quot;: &quot;&lt;schema-mapping&gt;\n  &lt;databases&gt;\n    &lt;list&gt;\n      &lt;schema-mapping-item&gt;\n        &lt;source-data-source-id&gt;869c85e5-f5ef-484d-81b8-4ec316653818&lt;/source-data-source-id&gt;\n        &lt;source-path&gt;database/&amp;quot;bendit&amp;quot;&lt;/source-path&gt;\n        &lt;target-data-source-id&gt;869c85e5-f5ef-484d-81b8-4ec316653818&lt;/target-data-source-id&gt;\n        &lt;target-path&gt;database/&amp;quot;bendit_production&amp;quot;/schema/&amp;quot;public&amp;quot;&lt;/target-path&gt;\n      &lt;/schema-mapping-item&gt;\n    &lt;/list&gt;\n  &lt;/databases&gt;\n&lt;/schema-mapping&gt;&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.16.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.16.0&quot;,
-    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/bendavison/sync/repos/bendit&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;wsl://Ubuntu@/home/ben/.local/share/pnpm/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;\\\\wsl$\\Ubuntu\\home\\ben\\sync\\sync\\repos\\bendit\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;\\\\wsl$\\Ubuntu\\home\\ben\\sync\\sync\\repos\\bendit\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "git-widget-placeholder": "main",
+    "import_schema_mapping": "<schema-mapping>\n  <databases>\n    <list>\n      <schema-mapping-item>\n        <source-data-source-id>869c85e5-f5ef-484d-81b8-4ec316653818</source-data-source-id>\n        <source-path>database/&quot;bendit&quot;</source-path>\n        <target-data-source-id>869c85e5-f5ef-484d-81b8-4ec316653818</target-data-source-id>\n        <target-path>database/&quot;bendit_production&quot;/schema/&quot;public&quot;</target-path>\n      </schema-mapping-item>\n    </list>\n  </databases>\n</schema-mapping>",
+    "javascript.nodejs.core.library.configured.version": "18.16.0",
+    "javascript.nodejs.core.library.typings.version": "18.16.0",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "/Users/bendavison/sync/repos/bendit",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "wsl://Ubuntu@/home/ben/.local/share/pnpm/node",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "\\\\wsl$\\Ubuntu\\home\\ben\\sync\\sync\\repos\\bendit\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "ts.external.directory.path": "\\\\wsl$\\Ubuntu\\home\\ben\\sync\\sync\\repos\\bendit\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -141,7 +147,7 @@
       <workItem from="1686846303453" duration="5672000" />
       <workItem from="1687880160772" duration="48950000" />
       <workItem from="1689629255311" duration="19825000" />
-      <workItem from="1689956478553" duration="17246000" />
+      <workItem from="1689956478553" duration="19362000" />
     </task>
     <servers />
   </component>
@@ -150,5 +156,17 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/misc.tsx</url>
+          <line>41</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

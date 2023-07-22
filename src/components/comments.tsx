@@ -143,18 +143,18 @@ const CommentReplyBox = (props: {
 
   return (
     <div className={"ml-3 mt-4 " + (props.hidden ? "hidden" : "")}>
-      <div className={"mb-2 ml-4 border-l border-gray-300 pb-1"}>
+      <div className={"mb-2 ml-4 border-l border-neutral-300 pb-1"}>
         <div className="ml-3 p-1">
           <textarea
             className={
-              "h-24 w-1/2 rounded-lg bg-gray-800 p-2 ring-1 ring-gray-600 transition-colors ease-in-out hover:bg-gray-700 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-fuchsia-700"
+              "h-24 w-1/2 rounded-lg bg-neutral-900 p-2 ring-1 ring-gray-600 transition-colors ease-in-out hover:bg-neutral-800 focus:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-fuchsia-700"
             }
             value={replyValue}
             onChange={(event) => setReplyValue(event.target.value)}
           />
         </div>
         <button
-          className="ml-3 rounded-lg bg-gray-700 p-2 hover:bg-gray-600"
+          className="ml-3 rounded-lg bg-neutral-800 p-2 hover:bg-neutral-700"
           onClick={handleSubmit}
         >
           Submit
@@ -207,7 +207,7 @@ export const Comment: React.FC<CommentProps> = ({
             </p>
           </div>
         </div>
-        <div className={"mb-2 ml-4 border-l border-gray-300 pb-1"}>
+        <div className={"mb-2 ml-4 border-l border-neutral-300 pb-1"}>
           <div className="ml-3 p-1">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {comment.content}

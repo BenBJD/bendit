@@ -59,7 +59,7 @@ const PostHeader: React.FC<{ postId: string }> = ({ postId }) => {
         {post.url && (
           <Link
             href={post.url}
-            className="relative flex w-64 items-center justify-center overflow-hidden rounded-3xl border border-gray-400"
+            className="relative flex w-64 items-center justify-center overflow-hidden rounded-3xl border border-neutral-400"
           >
             {post.ogImage ? (
               <Image
@@ -119,12 +119,12 @@ const CreateComment: React.FC<{ postId: string }> = ({ postId }) => {
         onChange={handleChange}
         type="text"
         className={
-          "h-10 w-full rounded-lg bg-gray-800 p-2 ring-1 ring-gray-600 transition-colors ease-in-out hover:bg-gray-700 focus:bg-gray-700 focus:outline-none focus:outline-2 focus:ring-fuchsia-700"
+          "h-10 w-full rounded-lg bg-neutral-900 p-2 ring-1 ring-gray-600 transition-colors ease-in-out hover:bg-neutral-800 focus:bg-neutral-800 focus:outline-none focus:outline-2 focus:ring-fuchsia-700"
         }
         placeholder={"Enter comment..."}
       />
       <input
-        className={"rounded-lg bg-gray-700 p-2 hover:bg-gray-600"}
+        className={"rounded-lg bg-neutral-800 p-2 hover:bg-neutral-700"}
         type={"submit"}
         onClick={handleCreateComment}
       />
@@ -171,7 +171,7 @@ const PostPage: NextPage = () => {
           <div className="mx-auto flex h-[calc(100vh-3.5rem)] w-3/4 space-x-4 p-2">
             <div
               className={
-                "h-max w-3/4 rounded-lg border border-gray-700 bg-gray-800"
+                "h-max w-3/4 rounded-lg border border-neutral-800 bg-neutral-900"
               }
             >
               <PostHeader postId={(!!postId ? postId : "") as string} />
@@ -184,7 +184,7 @@ const PostPage: NextPage = () => {
             </div>
             <div
               className={
-                "w-1/4 rounded-lg border border-gray-700 bg-gray-800 p-2"
+                "w-1/4 rounded-lg border border-neutral-800 bg-neutral-900 p-2"
               }
             >
               sidebar

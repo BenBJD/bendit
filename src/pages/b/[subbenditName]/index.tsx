@@ -36,7 +36,7 @@ const SubbenditHome: NextPage = () => {
         <div className="flex h-max w-screen space-x-4">
           <div
             className={
-              "h-max w-3/4 rounded-lg border border-gray-700 bg-gray-800"
+              "h-max w-3/4 rounded-lg border border-neutral-800 bg-neutral-900"
             }
           >
             <ul>
@@ -47,7 +47,7 @@ const SubbenditHome: NextPage = () => {
           </div>
           <div
             className={
-              "h-max w-1/4 rounded-lg border border-gray-700 bg-gray-800 p-2"
+              "h-max w-1/4 rounded-lg border border-neutral-800 bg-neutral-900 p-2"
             }
           >
             sidebar

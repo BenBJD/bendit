@@ -67,7 +67,7 @@ const NewPost: NextPage = () => {
           <div className="mx-auto flex h-[calc(100vh-3.5rem)] w-3/4 space-x-4 p-2">
             <div
               className={
-                "w-3/4 rounded-lg border border-gray-700 bg-gray-800 p-4"
+                "w-3/4 rounded-lg border border-neutral-800 bg-neutral-900 p-4"
               }
             >
               <h2 className="mb-4 text-2xl font-bold">Create a New Post</h2>
@@ -84,7 +84,7 @@ const NewPost: NextPage = () => {
                     id="title"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    className="mt-1 w-full rounded-xl bg-gray-800 p-2 text-gray-200 outline-none ring-1 ring-gray-600 transition-colors hover:bg-gray-700 focus:ring-fuchsia-700"
+                    className="mt-1 w-full rounded-xl bg-neutral-900 p-2 text-gray-200 outline-none ring-1 ring-gray-600 transition-colors hover:bg-neutral-800 focus:ring-fuchsia-700"
                     required
                   />
                 </div>
@@ -99,7 +99,7 @@ const NewPost: NextPage = () => {
                     id="content"
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
-                    className="mt-1 w-full rounded-xl bg-gray-800 p-2 text-gray-200 outline-none ring-1 ring-gray-600 transition-colors hover:bg-gray-700 focus:ring-fuchsia-700"
+                    className="mt-1 w-full rounded-xl bg-neutral-900 p-2 text-gray-200 outline-none ring-1 ring-gray-600 transition-colors hover:bg-neutral-800 focus:ring-fuchsia-700"
                     required
                   />
                 </div>
@@ -115,7 +115,7 @@ const NewPost: NextPage = () => {
                     id="url"
                     value={url}
                     onChange={(e) => setUrl(e.target.value)}
-                    className="border-1 mt-1 w-full rounded-xl bg-gray-800 p-2 text-gray-200 outline-none ring-1 ring-gray-600 transition-colors hover:bg-gray-700 focus:ring-fuchsia-700"
+                    className="border-1 mt-1 w-full rounded-xl bg-neutral-900 p-2 text-gray-200 outline-none ring-1 ring-gray-600 transition-colors hover:bg-neutral-800 focus:ring-fuchsia-700"
                   />
                 </div>
                 <div className="mb-4">
@@ -129,7 +129,7 @@ const NewPost: NextPage = () => {
                     id="subbendit"
                     value={selectedSub}
                     onChange={(e) => setSelectedSub(e.target.value as string)}
-                    className="mt-1 w-full rounded-xl bg-gray-800 p-2 text-gray-200 outline-none ring-1 ring-gray-600 transition-colors hover:bg-gray-700 focus:ring-fuchsia-700"
+                    className="mt-1 w-full rounded-xl bg-neutral-900 p-2 text-gray-200 outline-none ring-1 ring-gray-600 transition-colors hover:bg-neutral-800 focus:ring-fuchsia-700"
                   >
                     {subbendits.map((option) => (
                       <option key={option.name} value={option.name}>
@@ -148,7 +148,7 @@ const NewPost: NextPage = () => {
             </div>
             <div
               className={
-                "w-1/4 rounded-lg border border-gray-700 bg-gray-800 p-2"
+                "w-1/4 rounded-lg border border-neutral-800 bg-neutral-900 p-2"
               }
             >
               sidebar

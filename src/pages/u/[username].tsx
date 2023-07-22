@@ -47,7 +47,7 @@ const UserProfile: NextPage = () => {
           <p className="text-gray-400 ">Loading user profile...</p>
         )}
         <div className="flex h-max w-screen space-x-4">
-          <div className="w-3/4 rounded-lg border border-gray-700 bg-gray-800">
+          <div className="w-3/4 rounded-lg border border-neutral-800 bg-neutral-900">
             <ul>
               {!userPosts.data || userPosts.data.length > 0 ? (
                 userPosts.data?.map((post) => (
@@ -58,7 +58,7 @@ const UserProfile: NextPage = () => {
               )}
             </ul>
           </div>
-          <div className="w-1/4 rounded-lg border border-gray-700 bg-gray-800 p-2">
+          <div className="w-1/4 rounded-lg border border-neutral-800 bg-neutral-900 p-2">
             sidebar
           </div>
         </div>

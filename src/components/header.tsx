@@ -34,7 +34,9 @@ const ProfileButtons: FC<ProfileButtonsProps> = ({
   return (
     <nav className={"flex w-1/4 justify-center"}>
       <ul className="flex space-x-6">
-        <li className={"flex items-center rounded-md px-3 hover:bg-gray-700"}>
+        <li
+          className={"flex items-center rounded-md px-3 hover:bg-neutral-800"}
+        >
           <Link href={"/u/" + session.user.name}>{session.user.name}</Link>
         </li>
         <li>
@@ -69,7 +71,7 @@ export const Header: FC = () => {
   }
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 flex h-14 items-center justify-between border-b border-gray-700 bg-gray-800 p-2">
+    <header className="fixed left-0 right-0 top-0 z-50 flex h-14 items-center justify-between border-b border-neutral-800 bg-neutral-900 p-2">
       <div className="flex w-1/4 items-center">
         <Link href={"/"} className={"ml-5"}>
           <h1 className="text-2xl">bendit</h1>
@@ -78,7 +80,7 @@ export const Header: FC = () => {
 
       <form className="w-1/4">
         <input
-          className="w-full rounded-2xl bg-gray-800 px-4 py-2 ring-1 ring-fuchsia-800 transition duration-300 hover:bg-gray-700 focus:bg-gray-700 focus:outline-none"
+          className="w-full rounded-2xl bg-neutral-900 px-4 py-2 ring-1 ring-fuchsia-800 transition duration-300 hover:bg-neutral-800 focus:bg-neutral-800 focus:outline-none"
           type="search"
           placeholder="Search..."
           value={search}

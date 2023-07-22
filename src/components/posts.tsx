@@ -118,7 +118,7 @@ export const PostRow: React.FC<PostRowProps> = ({ postData }: PostRowProps) => {
     <li>
       <div
         className={
-          "flex flex-row space-x-2 border border-gray-700 p-1 transition-colors ease-in-out hover:border-fuchsia-700"
+          "flex flex-row space-x-2 border border-neutral-800 p-1 transition-colors ease-in-out hover:border-fuchsia-700"
         }
         onClick={handlePostClick}
         role="button"
