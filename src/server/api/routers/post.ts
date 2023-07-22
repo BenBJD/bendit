@@ -27,6 +27,7 @@ export const postRouter = createTRPCRouter({
         userId: z.string().optional(),
         sort: z.enum(["hot", "top", "new"]),
         page: z.number(),
+        subscribed: z.boolean().optional(),
       })
     )
     .query(async ({ ctx, input }) => {
@@ -54,6 +55,17 @@ export const postRouter = createTRPCRouter({
       } else if (input.userId !== undefined) {
         posts = await ctx.prisma.post.findMany({
           where: { userId: input.userId },
+          skip: (input.page - 1) * 50,
+          take: 50,
+          orderBy: orderBy,
+        })
+      } else if (input.subscribed) {
+        const subscriptions = await ctx.prisma.userSubbendit.findMany({
+          where: { userId: ctx.session?.user.id as string },
+        })
+        const subbenditIds = subscriptions.map((sub) => sub.subbenditId)
+        posts = await ctx.prisma.post.findMany({
+          where: { subbenditId: { in: subbenditIds } },
           skip: (input.page - 1) * 50,
           take: 50,
           orderBy: orderBy,
@@ -118,9 +130,9 @@ export const postRouter = createTRPCRouter({
 
       // Get subbendit
       const subbenditName = await ctx.prisma.subbendit.findUnique({
-        where: { id: post.subbenditId },
+        where: { id: post.subbenditId as string },
         select: { name: true },
-      })
+      } as any)
       if (subbenditName == null) {
         throw new Error("Subbendit posted in not found")
       }
@@ -161,7 +173,7 @@ export const postRouter = createTRPCRouter({
       if (input.subbenditId === undefined) {
         const subbendit = await ctx.prisma.subbendit.findUnique({
           where: { name: input.subbenditName },
-        })
+        } as any)
         if (subbendit === null) {
           throw new Error("Subbendit not found")
         }

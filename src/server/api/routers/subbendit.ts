@@ -11,33 +11,32 @@ export const subbenditRouter = createTRPCRouter({
     .query(({ ctx, input }) => {
       return ctx.prisma.subbendit.findUnique({
         where: { id: input.id },
-      })
+      } as any)
     }),
   getSubbenditFromName: publicProcedure
     .input(z.object({ name: z.string() }))
     .query(({ ctx, input }) => {
       return ctx.prisma.subbendit.findUnique({
         where: { name: input.name.toLowerCase() },
-      })
+      } as any)
     }),
   getSubbendits: publicProcedure.query(({ ctx }) => {
     return ctx.prisma.subbendit.findMany()
   }),
-  createSubreddit: protectedProcedure
+  createSubbendit: protectedProcedure
     .input(
       z.object({
         name: z.string(),
-        userId: z.string(),
         description: z.string(),
       })
     )
-    .mutation(({ ctx, input }) => {
-      ctx.prisma.subbendit.create({
+    .mutation(async ({ ctx, input }) => {
+      await ctx.prisma.subbendit.create({
         data: {
-          name: input.name,
-          userId: input.userId,
+          name: input.name.toLowerCase(),
           description: input.description,
-        },
+          userId: ctx.session.user.id as string,
+        } as any,
       })
     }),
 })

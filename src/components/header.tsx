@@ -77,7 +77,7 @@ export const Header: FC = () => {
   return (
     <>
       <header className="fixed left-0 right-0 top-0 z-50 ">
-        {subbendits && (
+        {subbendits ? (
           <div
             className={
               "flex flex-row border-b border-neutral-800 bg-neutral-950"
@@ -94,6 +94,14 @@ export const Header: FC = () => {
                 </div>
               </Link>
             ))}
+          </div>
+        ) : (
+          <div
+            className={
+              "flex flex-row border-b border-neutral-800 bg-neutral-950"
+            }
+          >
+            Loading...
           </div>
         )}
         <div

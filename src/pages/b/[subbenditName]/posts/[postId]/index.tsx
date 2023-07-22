@@ -155,9 +155,19 @@ const PostPage: NextPage = () => {
       { enabled: !!postId }
     )
 
-  if (postStatus === "loading" || topLevelCommentsStatus === "loading") {
+  // Get subbendit
+  const { data: subbendit, status: subbenditStatus } =
+    api.subbenditRouter.getSubbendit.useQuery({
+      id: (!!post ? post.subbenditId : "") as string,
+    })
+
+  if (
+    postStatus === "loading" ||
+    topLevelCommentsStatus === "loading" ||
+    subbenditStatus === "loading"
+  ) {
     return <>Loading...</>
-  } else if (!post || !topLevelComments || !postId) {
+  } else if (!post || !topLevelComments || !postId || !subbendit) {
     return <>Missing some data...</>
   } else {
     return (
@@ -183,7 +193,7 @@ const PostPage: NextPage = () => {
                 ))}
               </div>
             </div>
-            <PostSideBar />
+            <PostSideBar subbendit={subbendit} />
           </div>
         </main>
       </>

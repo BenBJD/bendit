@@ -46,7 +46,7 @@ const SubbenditHome: NextPage = () => {
               ))}
             </ul>
           </div>
-          <SubbenditSideBar />
+          <SubbenditSideBar subbendit={subbenditData.data} />
         </div>
       </main>
     </>

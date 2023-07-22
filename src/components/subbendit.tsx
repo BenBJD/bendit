@@ -54,7 +54,7 @@ export const SubbenditHeader: React.FC<SubbenditHeaderProps> = ({
             className={"rounded-full"}
           />
         </div>
-        <p className="my-auto text-2xl">r/{subbenditData.name}</p>
+        <p className="my-auto text-2xl">b/{subbenditData.name}</p>
       </Link>
       <div className="mb-1 flex flex-row justify-center space-x-2 border-b border-neutral-800 bg-neutral-900 p-1">
         {links.map((link, index) => (
