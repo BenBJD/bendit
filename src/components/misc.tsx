@@ -17,13 +17,13 @@ export const CreatePost = () => {
       {!!session.data?.user && (
         <Link
           href={("/u/" + session.data.user.name) as string}
-          className={"relative w-11"}
+          className={"relative w-12"}
         >
           {session.data.user.image ? (
             <Image
               src={session.data.user.image}
               alt={"Profile Picture"}
-              className={"ml-4 rounded-full border border-fuchsia-700"}
+              className={"ml-4 rounded-full border-2 border-neutral-700"}
               fill={true}
             />
           ) : (

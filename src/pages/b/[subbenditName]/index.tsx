@@ -5,6 +5,7 @@ import { PostRow } from "~/components/posts"
 import { CreatePost } from "~/components/misc"
 import { useRouter } from "next/router"
 import { SubbenditHeader } from "~/components/subbendit"
+import { SubbenditSideBar } from "~/components/sidebar"
 
 const SubbenditHome: NextPage = () => {
   const router = useRouter()
@@ -30,10 +31,10 @@ const SubbenditHome: NextPage = () => {
         <meta name="description" content="The back-alley of the internet" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={"mt-14 flex flex-col space-y-3 p-4"}>
+      <main className={"mt-20 flex flex-col space-y-3 p-4"}>
         <SubbenditHeader id={subbenditData.data.id} />
         <CreatePost />
-        <div className="flex h-max w-screen space-x-4">
+        <div className="flex h-max w-full space-x-4">
           <div
             className={
               "h-max w-3/4 rounded-lg border border-neutral-800 bg-neutral-900"
@@ -45,13 +46,7 @@ const SubbenditHome: NextPage = () => {
               ))}
             </ul>
           </div>
-          <div
-            className={
-              "h-max w-1/4 rounded-lg border border-neutral-800 bg-neutral-900 p-2"
-            }
-          >
-            sidebar
-          </div>
+          <SubbenditSideBar />
         </div>
       </main>
     </>

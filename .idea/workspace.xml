@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6af86491-7b91-456d-a21d-072513ccd1c0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/dockerupdate.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dockerupdate.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/b/new.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/misc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/misc.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/b/[subbenditName]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/b/[subbenditName]/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/b/[subbenditName]/posts/[postId]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/b/[subbenditName]/posts/[postId]/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +143,7 @@
       <workItem from="1686846303453" duration="5672000" />
       <workItem from="1687880160772" duration="48950000" />
       <workItem from="1689629255311" duration="19825000" />
-      <workItem from="1689956478553" duration="19539000" />
+      <workItem from="1689956478553" duration="23803000" />
     </task>
     <servers />
   </component>
@@ -144,17 +152,5 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/misc.tsx</url>
-          <line>41</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

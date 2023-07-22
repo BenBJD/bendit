@@ -1,4 +1,9 @@
 @tailwind base;
+
+:root {
+    color-scheme: dark;
+}
+
 @tailwind components;
 @tailwind utilities;
 
@@ -6,3 +11,4 @@ body {
     @apply bg-neutral-950;
     @apply text-gray-100;
 }
+

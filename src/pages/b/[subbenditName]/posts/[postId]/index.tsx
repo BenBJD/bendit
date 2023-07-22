@@ -12,6 +12,7 @@ import { GuestPostVotes, PostButtons, PostVotes } from "~/components/posts"
 import { SubbenditHeader } from "~/components/subbendit"
 import { useSession } from "next-auth/react"
 import { set } from "zod"
+import { PostSideBar } from "~/components/sidebar"
 
 const PostHeader: React.FC<{ postId: string }> = ({ postId }) => {
   const session = useSession()
@@ -166,9 +167,9 @@ const PostPage: NextPage = () => {
           <meta name="description" content={post.title} />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <main className={"mt-14"}>
+        <main className={"mt-20"}>
           <SubbenditHeader id={post.subbenditId} />
-          <div className="mx-auto flex h-[calc(100vh-3.5rem)] w-3/4 space-x-4 p-2">
+          <div className="mx-auto flex h-[calc(100vh-3.5rem)] w-full space-x-4 p-2">
             <div
               className={
                 "h-max w-3/4 rounded-lg border border-neutral-800 bg-neutral-900"
@@ -182,13 +183,7 @@ const PostPage: NextPage = () => {
                 ))}
               </div>
             </div>
-            <div
-              className={
-                "w-1/4 rounded-lg border border-neutral-800 bg-neutral-900 p-2"
-              }
-            >
-              sidebar
-            </div>
+            <PostSideBar />
           </div>
         </main>
       </>
