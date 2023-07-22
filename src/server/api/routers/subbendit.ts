@@ -20,6 +20,9 @@ export const subbenditRouter = createTRPCRouter({
         where: { name: input.name.toLowerCase() },
       })
     }),
+  getSubbendits: publicProcedure.query(({ ctx }) => {
+    return ctx.prisma.subbendit.findMany()
+  }),
   createSubreddit: protectedProcedure
     .input(
       z.object({
