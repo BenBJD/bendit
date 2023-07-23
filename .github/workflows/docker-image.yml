@@ -20,4 +20,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag bendit-server:$(date +%s)
+      run: docker build . --build-arg DATABASE_URL=${{ secrets.DATABASE_URL }} --file Dockerfile --tag bendit-server:$(date +%s)
