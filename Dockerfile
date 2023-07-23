@@ -21,6 +21,7 @@ FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+COPY .env.production .
 
 # Next.js collects completely anonymous telemetry data about general usage.
 # Learn more here: https://nextjs.org/telemetry
@@ -28,6 +29,21 @@ COPY . .
 # ENV NEXT_TELEMETRY_DISABLED 1
 
 # RUN yarn build
+
+ARG DATABASE_URL
+ENV DATABASE_URL=$DATABASE_URL
+ARG NEXTAUTH_SECRET
+ENV NEXTAUTH_SECRET=$NEXTAUTH_SECRET
+ARG NEXTAUTH_URL
+ENV NEXTAUTH_URL=$NEXTAUTH_URL
+ARG DISCORD_CLIENT_ID
+ENV DISCORD_CLIENT_ID=$DISCORD_CLIENT_ID
+ARG DISCORD_CLIENT_SECRET
+ENV DISCORD_CLIENT_SECRET=$DISCORD_CLIENT_SECRET
+ARG SPOTIFY_CLIENT_ID
+ENV SPOTIFY_CLIENT_ID=$SPOTIFY_CLIENT_ID
+ARG SPOTIFY_CLIENT_SECRET
+ENV SPOTIFY_CLIENT_SECRET=$SPOTIFY_CLIENT_SECRET
 
 # If using npm comment out above and use below instead
 RUN npm run postinstall
