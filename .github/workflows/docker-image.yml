@@ -40,4 +40,4 @@ jobs:
           --build-arg "SPOTIFY_CLIENT_SECRET=${{ secrets.SPOTIFY_CLIENT_SECRET }}" \
           --tag bendit:latest
           echo "done"
-          docker image push "ghcr.io/benbjd/bendit:latest"
+          docker image push "ghcr.io/BenBJD/bendit:latest"
