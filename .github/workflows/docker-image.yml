@@ -18,14 +18,17 @@ jobs:
       SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
       SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
       - name: Log in to GitHub Container Registry
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build the Docker image
-        uses: actions/checkout@v3
+      
+      - name: Build and push Docker image
         run: |
           docker build . --file Dockerfile \
           --build-arg DATABASE_URL=${{ secrets.DATABASE_URL }} \
@@ -35,5 +38,5 @@ jobs:
           --build-arg DISCORD_CLIENT_SECRET=${{ secrets.DISCORD_CLIENT_SECRET }} \
           --build-arg SPOTIFY_CLIENT_ID=${{ secrets.SPOTIFY_CLIENT_ID }} \
           --build-arg SPOTIFY_CLIENT_SECRET=${{ secrets.SPOTIFY_CLIENT_SECRET }} \
-          --tag bendit-server:latest
+          --tag ghcr.io/${{ github.repository_owner }}/bendit-server:latest
           docker push ghcr.io/BenBJD/bendit-server:latest
