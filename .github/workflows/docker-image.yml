@@ -38,5 +38,5 @@ jobs:
           --build-arg "DISCORD_CLIENT_SECRET=${{ secrets.DISCORD_CLIENT_SECRET }}" \
           --build-arg "SPOTIFY_CLIENT_ID=${{ secrets.SPOTIFY_CLIENT_ID }}" \
           --build-arg "SPOTIFY_CLIENT_SECRET=${{ secrets.SPOTIFY_CLIENT_SECRET }}" \
-          --tag bendit:latest
-          docker push ghcr.io/${{ github.repository_owner }}/bendit:latest
+          --tag bendit
+          docker push ghcr.io/${{ github.repository_owner }}/bendit
