@@ -122,7 +122,7 @@ const CommentReplyBox = (props: {
   commentId: string
   hidden: boolean
 }) => {
-  const [replyValue, setReplyValue] = useState<string>("Enter Comment ...")
+  const [replyValue, setReplyValue] = useState<string>("")
 
   const commentMutation = api.commentRouter.createComment.useMutation()
   const voteMutation = api.voteRouter.vote.useMutation()
@@ -149,6 +149,7 @@ const CommentReplyBox = (props: {
             className={
               "h-24 w-1/2 rounded-lg bg-neutral-900 p-2 ring-1 ring-gray-600 transition-colors ease-in-out hover:bg-neutral-800 focus:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-fuchsia-700"
             }
+            placeholder={"Enter Comment Reply..."}
             value={replyValue}
             onChange={(event) => setReplyValue(event.target.value)}
           />

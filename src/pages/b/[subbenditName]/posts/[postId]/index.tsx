@@ -94,7 +94,7 @@ const PostHeader: React.FC<{ postId: string }> = ({ postId }) => {
 
 const CreateComment: React.FC<{ postId: string }> = ({ postId }) => {
   const createCommentMutation = api.commentRouter.createComment.useMutation()
-  const [comment, setComment] = useState<string>("Enter Comment...")
+  const [comment, setComment] = useState<string>("")
 
   const handleCreateComment = () => {
     createCommentMutation.mutate({
@@ -122,6 +122,7 @@ const CreateComment: React.FC<{ postId: string }> = ({ postId }) => {
         className={
           "h-10 w-full rounded-lg bg-neutral-900 p-2 ring-1 ring-gray-600 transition-colors ease-in-out hover:bg-neutral-800 focus:bg-neutral-800 focus:outline-none focus:outline-2 focus:ring-fuchsia-700"
         }
+        placeholder={"Enter Comment..."}
       />
       <input
         className={"rounded-lg bg-neutral-800 p-2 hover:bg-neutral-700"}
