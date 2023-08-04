@@ -174,7 +174,13 @@ const PostPage: NextPage = () => {
       <>
         <Head>
           <title>{post.title}</title>
-          <meta name="description" content={post.title} />
+          <meta name="title" content={post.title} />
+          <meta name="description" content={post.content || post.title} />
+          <meta property={"og:title"} content={post.title} />
+          <meta
+            property={"og:description"}
+            content={post.content || post.title}
+          />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main className={"mt-20"}>
