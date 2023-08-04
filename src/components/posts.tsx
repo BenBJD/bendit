@@ -28,7 +28,10 @@ export const PostButtons: React.FC<PostRowProps> = ({ postData }) => {
         postId={postData.id}
         subbenditName={postData.subbenditName}
       />
-      <ShareButton />
+      <ShareButton
+        postId={postData.id}
+        subbenditName={postData.subbenditName}
+      />
       <SaveButton />
       <HideButton />
       <ReportButton />

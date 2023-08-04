@@ -44,15 +44,17 @@ export const CreatePost = () => {
           )}
         </Link>
       )}
-      <button
+      <input
         className={
-          "flex w-full rounded-xl bg-neutral-900 p-2 outline-none ring-1 ring-fuchsia-800"
+          "text-md flex w-full rounded-xl bg-neutral-900 p-2 outline-none ring-1 ring-fuchsia-800"
         }
         onClick={() => router.push("/post")}
+        placeholder={"What's on your mind?"}
+      />
+      <button
+        className={"rounded-md px-2 hover:bg-neutral-800"}
+        onClick={() => router.push("/post")}
       >
-        <p className={"text-md"}>Create post</p>
-      </button>
-      <button className={"rounded-md px-2 hover:bg-neutral-800"}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -68,7 +70,10 @@ export const CreatePost = () => {
           />
         </svg>
       </button>
-      <button className={"rounded-md px-2 hover:bg-neutral-800"}>
+      <button
+        className={"rounded-md px-2 hover:bg-neutral-800"}
+        onClick={() => router.push("/post")}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

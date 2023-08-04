@@ -28,7 +28,7 @@ const UserProfile: NextPage = () => {
         <meta name="description" content={`${username}'s profile on Bendit`} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="mt-14 flex flex-col space-y-3 p-4">
+      <main className="mt-24 flex flex-col space-y-3 p-4">
         {user.data ? (
           <div className={"flex h-10 flex-row space-x-2 pl-5"}>
             <div className="relative flex w-10 space-x-2">

@@ -31,22 +31,24 @@ const SubbenditHome: NextPage = () => {
         <meta name="description" content="The back-alley of the internet" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={"mt-20 flex flex-col space-y-3 p-4"}>
+      <main className={"mt-20 flex flex-col"}>
         <SubbenditHeader id={subbenditData.data.id} />
-        <CreatePost />
-        <div className="flex h-max w-full space-x-4">
-          <div
-            className={
-              "h-max w-3/4 rounded-lg border border-neutral-800 bg-neutral-900"
-            }
-          >
-            <ul>
-              {posts.data?.map((post) => (
-                <PostRow postData={post} key={post.id} />
-              ))}
-            </ul>
+        <div className={"space-y-3 p-4"}>
+          <CreatePost />
+          <div className="flex h-max w-full space-x-4">
+            <div
+              className={
+                "h-max w-3/4 rounded-lg border border-neutral-800 bg-neutral-900"
+              }
+            >
+              <ul>
+                {posts.data?.map((post) => (
+                  <PostRow postData={post} key={post.id} />
+                ))}
+              </ul>
+            </div>
+            <SubbenditSideBar subbendit={subbenditData.data} />
           </div>
-          <SubbenditSideBar subbendit={subbenditData.data} />
         </div>
       </main>
     </>

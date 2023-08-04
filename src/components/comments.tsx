@@ -25,7 +25,6 @@ export const CommentButtons: React.FC<CommentsButtonsProps> = ({
 }: CommentsButtonsProps) => {
   return (
     <div className={"flex flex-row space-x-2"}>
-      <ShareButton />
       <SaveButton />
       <HideButton />
       <ReportButton />

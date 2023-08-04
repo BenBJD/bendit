@@ -15,13 +15,17 @@ const CreatePostAndCommunity: React.FC = () => {
       <div className={"flex flex-col space-y-2 p-2"}>
         <Link
           href={"/post"}
-          className={"rounded-2xl bg-neutral-800 p-1 text-center"}
+          className={
+            "rounded-2xl bg-neutral-800 p-1 text-center hover:bg-neutral-700"
+          }
         >
           <p>Create Post</p>
         </Link>
         <Link
           href={"/b/new"}
-          className={"rounded-2xl bg-neutral-800 p-1 text-center"}
+          className={
+            "rounded-2xl bg-neutral-800 p-1 text-center hover:bg-neutral-700"
+          }
         >
           <p>Create Community</p>
         </Link>
@@ -47,7 +51,9 @@ const CreatePost: React.FC<{ subbendit: Subbendit }> = (props: {
       >
         <Link
           href={"/post"}
-          className={"rounded-2xl bg-neutral-800 p-1 text-center"}
+          className={
+            "rounded-2xl bg-neutral-800 p-1 text-center hover:bg-neutral-700"
+          }
         >
           <p>Create Post</p>
         </Link>
